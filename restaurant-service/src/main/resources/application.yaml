@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: restaurant-service
+  datasource:
+    url: jdbc:postgresql://localhost:5433/kafka
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show_sql: true
+  main:
+    web-application-type: servlet
+  kafka:
+    bootstrap-servers: localhost:9092
+    restaurant-group-id: group-1
+    review-group-id: group-2
+
+kafka:
+  topic:
+    restaurant: restaurant-topic
+    review: review-topic
+
+server:
+  port: 8080

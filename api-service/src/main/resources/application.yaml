@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: api-service
+  kafka:
+    bootstrap-servers: localhost:9092
+
+kafka:
+  topic:
+    restaurant: restaurant-topic
+    review: review-topic
+
+server:
+  port: 8081
